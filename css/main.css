@@ -117,7 +117,29 @@ a {
 }
 
 .logo img {
-    width: 10%;
+    width: 30%;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    display: block;
+}
+
+.logo img:hover {
+    width: 35%;
+    -webkit-transform: rotateZ(-40deg);
+    -ms-transform: rotateZ(-40deg);
+    transform: rotateZ(-40deg);
+}
+
+nav {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.navigation {
+    padding-inline-start: 0px;
 }
 
 .navigation li {
@@ -205,6 +227,7 @@ a {
 .mySlides img {
     width: 100%;
     height: 250px;
+    border: 4px solid rgba(191, 10, 48, .9);
 }
 
 /* Next & previous buttons */
@@ -383,16 +406,69 @@ a {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+/**** TABLET STYLES ****/
+@media (min-width: 768px) {
+    
+    /**** NAVIGATION ****/
+    
+    .logo img {
+        width: 10%;
+        display: inline;
+        float: left;
+        margin-left: 1em;
+    }
+    
+    .logo img:hover {
+        width: 10%;
+        -webkit-transform: rotateZ(-40deg);
+        -ms-transform: rotateZ(-40deg);
+        transform: rotateZ(-40deg);
+    }
+    
+    .head-wrapper {
+        height: 9em;
+    }
+    
+    .navigation {
+        float: right;
+        margin: 0 auto;
+        padding-top: 1em;
+    }
+
+    .navigation li {
+        width: 75%;
+        border-radius: .5em;
+        display: inline;
+    }
+
+    .navigation li a {
+        display: inline;
+    }
+    
+    /**** INTRO/TITLE ****/
+
+    .intro {
+        padding: 1em;
+        display: block;
+        clear: both;
+    }
+
+    .intro h1 {
+        font-family: 'Allerta Stencil', sans-serif;
+    }
+
 }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
+    @media only screen and (min-width: 35em) {
+        /* Style adjustments for viewports that meet the condition */
+    }
+
+    @media print,
+           (-webkit-min-device-pixel-ratio: 1.25),
+           (min-resolution: 1.25dppx),
+           (min-resolution: 120dpi) {
+        /* Style adjustments for high resolution devices */
+    }
 
 /* ==========================================================================
    Print styles.
