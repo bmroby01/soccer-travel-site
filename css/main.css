@@ -102,7 +102,7 @@ textarea {
     box-sizing: border-box;
 }
 
-a {
+a, p, li {
     font-family: 'Muli', sans-serif;
     font-weight: bold;
     font-weight: 2rem;
@@ -187,6 +187,9 @@ nav {
 
 /**** MAP AND BLOG CARDS ****/
 
+.list-group img {
+    width: 4em;
+}
 .card-header {
    font-family: 'Muli', sans-serif;
     font-size: 2rem;
@@ -207,25 +210,12 @@ nav {
 
 /**** SLIDESHOW ****/
 
-.slideshow-title h2{
-    font-family: 'Muli', sans-serif;
-    font-size: 2rem;
-    color: rgb(0, 40, 104);
-    text-align: center;
-    text-shadow: 1px 2px rgba(191, 10, 48, .5);
-    border: 2px solid rgb(230, 230, 230);
-
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
 .slideshow-container {
   width: 75%;
   max-width: 1000px;
   position: relative;
   margin: 0 auto;
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
 }
 
 .mySlides img {
@@ -233,6 +223,7 @@ nav {
     height: 250px;
     border: 4px solid rgba(191, 10, 48, .9);
 }
+
 
 /* Next & previous buttons */
 .prev, .next {
@@ -257,6 +248,7 @@ nav {
 /* Position the "next button" to the right */
 .next {
   right: 0;
+  margin-right: .5em;
   border-radius: 3px 0 0 3px;
   text-shadow: -1px 2px rgb(191, 10, 48);
 }
@@ -314,7 +306,29 @@ nav {
 
 
 
+/**** FOOTER ****/
 
+footer {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 3em;
+    background-color: rgb(0, 40, 104);
+    color: white;
+    height: 80px;
+    padding-top: 2em;
+    font-family: 'Muli', sans-serif;
+}
+
+footer img {
+    width: 2em;
+}
+
+/**** ABOUT PAGE ****/
+
+.hide {
+    display: none;
+}
 
 
 
@@ -465,6 +479,8 @@ nav {
     height: 350px;
     border: 4px solid rgba(191, 10, 48, .9);
     }
+    
+
 }
 
     @media only screen and (min-width: 35em) {
