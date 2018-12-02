@@ -324,7 +324,11 @@ footer img {
     width: 2em;
 }
 
+/**** ABOUT PAGE ****/
 
+.hide {
+    display: none;
+}
 
 
 

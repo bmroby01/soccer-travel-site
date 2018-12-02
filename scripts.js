@@ -1,3 +1,4 @@
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -23,16 +24,31 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block"; 
-  dots[slideIndex-1].className += " active";
-};
 
-//More about Brian button
-$( document ).ready(function() {
- 
-    $('#btn-more')onclick(function() {
-    $('#more-brian').html("<p>Brian Davis is a father and husband. He loves soccer and has been to over 30 United States Men's and Women's National Team games around the world. He loves Louisville City FC and is co-host of the BarrelProof Podcast.")
-})
- 
+
+}
+
+
+// Show More-Brian div when "More About Brian" button is clicked
+
+//function showMoreButton() {
+ //   const p = document.getElementById('more-brian');
+ //   if (p.className == 'hide') {
+//        p.toggleClass
+ //   }
+//}
+
+//const button = document.querySelector('.aboutBtn');
+//const p = document.querySelector('#more-brian');
+
+//button.addEventListener('click', () =>{
+ //   p.classList.toggle("hide");
+//});
+
+var button = document.querySelector(".aboutBtn");
+var divToToggle = document.getElementById("#more-brian");
+
+button.addEventListener('click', function() {
+    divToToggle.classList.toggle("hide");
 });
 
