@@ -210,100 +210,75 @@ nav {
 
 /**** SLIDESHOW ****/
 
-.slideshow-container {
-  width: 75%;
-  max-width: 1000px;
-  position: relative;
-  margin: 0 auto;
-  margin-bottom: 2em;
-}
+/**** Essentials ****/
 
-.mySlides img {
+#slides {
+    position: relative;
+    height: 300px;
     width: 100%;
-    height: 250px;
-    border: 4px solid rgba(191, 10, 48, .9);
+    margin: 0 auto;
+    margin-left: .4em;
+    margin-top: .5em;
+    list-style-type: none;
 }
 
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 95%;
+    height: 10em;
+    opacity: 0;
+    z-index: 1;
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.showing {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* .slideshow-container {
+  width: 95%;
+  height: 28em;
   position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: .5em;
-  padding: 16px;
-  color: black;
-  font-weight: bold;
-  font-size: 30px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+  margin: 0 auto;
+} */
+
+/*
+non-essential styles
+*/
+
+.slide {
+    font-size: 40px;
+    padding: 1em;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+    max-height: 8em;
 }
 
-.prev {
-    text-shadow: 1px 2px rgb(191, 10, 48);
+.slide-img {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  margin-right: .5em;
-  border-radius: 3px 0 0 3px;
-  text-shadow: -1px 2px rgb(191, 10, 48);
+.slide:nth-of-type(1) {
+    background: rgb(191, 10, 48);
+}
+.slide:nth-of-type(2) {
+    background: rgb(0, 40, 104);
+}
+.slide:nth-of-type(3) {
+    background: rgb(191, 10, 48);
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  text-shadow: 2px 2px black;
-  bottom: .5em;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: black;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  text-align: center;
-  left: 45%;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
+/**** CONTACT CARD ****/
 
 
 /**** FOOTER ****/
@@ -312,7 +287,7 @@ footer {
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    margin-top: 3em;
+    margin-top: 4em;
     background-color: rgb(0, 40, 104);
     color: white;
     height: 80px;
@@ -423,30 +398,57 @@ footer img {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+/**** DESKTOP STYLES ****/
 
-/**** TABLET STYLES ****/
-@media (min-width: 725px) {
-    
+* @media (min-width: 712px) {
+  /**** NAVIGATION ****/
+
+
+  /**** INTRO/TITLE ****/
+
+   /**** CARDS ****/
+
+  /**** SLIDESHOW ****/
+
+  .slideshow-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #slides {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .slide {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-left: 2em;
+  }
+}
+
+/**** DESKTOP STYLES ****/
+@media (min-width: 875px) {
+
     /**** NAVIGATION ****/
-    
+
     .logo img {
         width: 10%;
         display: inline;
         float: left;
         margin-left: 1em;
     }
-    
-    .logo img:hover {
-        width: 10%;
-        -webkit-transform: rotateZ(-40deg);
-        -ms-transform: rotateZ(-40deg);
-        transform: rotateZ(-40deg);
-    }
-    
+
     .head-wrapper {
-        height: 9em;
+      height: 200pxs;
+      max-height: 15em;
+      overflow: hidden;
     }
-    
+
     .navigation {
         float: right;
         margin: 0 auto;
@@ -462,7 +464,7 @@ footer img {
     .navigation li a {
         display: inline;
     }
-    
+
     /**** INTRO/TITLE ****/
 
     .intro {
@@ -471,16 +473,76 @@ footer img {
         clear: both;
     }
      /**** CARDS ****/
-    
-    /**** SLIDESHOW ****/
-    
-    .mySlides img {
-    width: 100%;
-    height: 350px;
-    border: 4px solid rgba(191, 10, 48, .9);
-    }
-    
 
+    /**** SLIDESHOW ****/
+    .slideshow-container {
+      height: 30em;
+      float: left;
+    }
+
+    #slides {
+      width: 90%;
+      height: 40em;
+      margin-top: 1em;
+    }
+
+    .slide {
+      width: 100%;
+      max-height: 300px;
+      height: 30em;
+    }
+
+    .slide img {
+      height: 5.5em;
+    }
+
+    /**** FOOTER ****/
+
+    footer {
+      clear: both;
+    }
+}
+
+/**** LARGE DESKTOP STYLES ****/
+
+@media (min-width: 1200px) {
+
+  /**** SLIDESHOW ****/
+
+  .slideshow-container {
+    height: 28em;
+    max-width: 400px;
+    position: absolute;
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex: 0 0 50%;
+  }
+
+  #slides {
+    width: 90%;
+    height: 30em;
+    margin-top: 1em;
+    margin-right: 2em;
+    margin-left: 0;
+  }
+
+  .slide {
+    width: 100%;
+    max-height: 300px;
+    margin-right: 1em;
+    margin-left: 0;
+  }
+
+  .slide img {
+    height: 5.7em;
+  }
+
+  /**** FOOTER ****/
+
+  footer {
+    clear: both;
+  }
 }
 
     @media only screen and (min-width: 35em) {
