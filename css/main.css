@@ -242,12 +242,12 @@ nav {
     z-index: 2;
 }
 
-.slideshow-container {
+/* .slideshow-container {
   width: 95%;
   height: 28em;
   position: absolute;
   margin: 0 auto;
-}
+} */
 
 /*
 non-essential styles
@@ -398,9 +398,41 @@ footer img {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+/**** DESKTOP STYLES ****/
 
-/**** TABLET STYLES ****/
-@media (min-width: 712px) {
+* @media (min-width: 712px) {
+  /**** NAVIGATION ****/
+
+
+  /**** INTRO/TITLE ****/
+
+   /**** CARDS ****/
+
+  /**** SLIDESHOW ****/
+
+  .slideshow-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #slides {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .slide {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-left: 2em;
+  }
+}
+
+/**** DESKTOP STYLES ****/
+@media (min-width: 875px) {
 
     /**** NAVIGATION ****/
 
@@ -412,7 +444,9 @@ footer img {
     }
 
     .head-wrapper {
-        height: 9em;
+      height: 200pxs;
+      max-height: 15em;
+      overflow: hidden;
     }
 
     .navigation {
@@ -441,14 +475,74 @@ footer img {
      /**** CARDS ****/
 
     /**** SLIDESHOW ****/
-
-    .mySlides img {
-    width: 100%;
-    height: 350px;
-    border: 4px solid rgba(191, 10, 48, .9);
+    .slideshow-container {
+      height: 30em;
+      float: left;
     }
 
+    #slides {
+      width: 90%;
+      height: 40em;
+      margin-top: 1em;
+    }
 
+    .slide {
+      width: 100%;
+      max-height: 300px;
+      height: 30em;
+    }
+
+    .slide img {
+      height: 5.5em;
+    }
+
+    /**** FOOTER ****/
+
+    footer {
+      clear: both;
+    }
+}
+
+/**** LARGE DESKTOP STYLES ****/
+
+@media (min-width: 1200px) {
+
+  /**** SLIDESHOW ****/
+
+  .slideshow-container {
+    height: 28em;
+    max-width: 400px;
+    position: absolute;
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex: 0 0 50%;
+  }
+
+  #slides {
+    width: 90%;
+    height: 30em;
+    margin-top: 1em;
+    margin-right: 2em;
+    margin-left: 0;
+  }
+
+  .slide {
+    width: 100%;
+    max-height: 300px;
+    margin-right: 1em;
+    margin-left: 0;
+  }
+
+  .slide img {
+    height: 5.7em;
+  }
+
+  /**** FOOTER ****/
+
+  footer {
+    clear: both;
+  }
 }
 
     @media only screen and (min-width: 35em) {
