@@ -242,12 +242,12 @@ nav {
     z-index: 2;
 }
 
-/* .slideshow-container {
+.slideshow-container {
   width: 95%;
   height: 28em;
   position: absolute;
   margin: 0 auto;
-} */
+}
 
 /*
 non-essential styles
@@ -301,8 +301,36 @@ footer img {
 
 /**** ABOUT PAGE ****/
 
+/**** TITLE AREA ****/
+
+.about-page h2 {
+  text-align: center;
+  margin-top: 1em;
+}
+
+/**** CARDS ****/
+
+.about-card {
+  width: 100%;
+}
 .hide {
     display: none;
+}
+
+.name {
+  text-align: center;
+  margin-top: .5em;
+}
+
+.headshot {
+  width: 60%;
+}
+
+.btn {
+  padding: 1em;
+  margin: 0 auto;
+  margin-top: 1em;
+
 }
 
 
@@ -398,9 +426,10 @@ footer img {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
 /**** DESKTOP STYLES ****/
 
-* @media (min-width: 712px) {
+@media (min-width: 675px) {
   /**** NAVIGATION ****/
 
 
@@ -411,24 +440,33 @@ footer img {
   /**** SLIDESHOW ****/
 
   .slideshow-container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
+    max-heght: 1100px;
   }
 
   #slides {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
+    max-height: 900px;
   }
 
   .slide {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    margin-left: 2em;
+    width: 90%;
+    margin-left: 1em;
+    max-height: 450px;
+    height: 20em;
   }
+
+  .slide img {
+    height: 9em;
+  }
+
+  /**** CONTACT ****/
+
+  .contact-card {
+    margin-top: 7em;
+  }
+
 }
 
 /**** DESKTOP STYLES ****/
@@ -476,7 +514,7 @@ footer img {
 
     /**** SLIDESHOW ****/
     .slideshow-container {
-      height: 30em;
+      height: 50em;
       float: left;
     }
 
@@ -488,12 +526,12 @@ footer img {
 
     .slide {
       width: 100%;
-      max-height: 300px;
+      max-height: 450px;
       height: 30em;
     }
 
     .slide img {
-      height: 5.5em;
+      height: 9em;
     }
 
     /**** FOOTER ****/
@@ -505,8 +543,12 @@ footer img {
 
 /**** LARGE DESKTOP STYLES ****/
 
-@media (min-width: 1200px) {
+@media (min-width: 993px) {
+  /**** NAVIGATION ****/
 
+  .logo img:hover {
+      width: 15%;
+  }
   /**** SLIDESHOW ****/
 
   .slideshow-container {
