@@ -102,7 +102,7 @@ textarea {
     box-sizing: border-box;
 }
 
-a {
+a, p, li {
     font-family: 'Muli', sans-serif;
     font-weight: bold;
     font-weight: 2rem;
@@ -188,6 +188,9 @@ nav {
 
 /**** MAP AND BLOG CARDS ****/
 
+.list-group img {
+    width: 4em;
+}
 .card-header {
    font-family: 'Muli', sans-serif;
     font-size: 2rem;
@@ -205,117 +208,137 @@ nav {
     height: 15rem;
 }
 
+#map {
+  height: 300px;
+  width: 100%;
+  background-color: gray;
+}
+
 
 /**** SLIDESHOW ****/
 
-.slideshow-title h2{
-    font-family: 'Muli', sans-serif;
-    font-size: 2rem;
-    color: rgb(0, 40, 104);
-    text-align: center;
-    text-shadow: 1px 2px rgba(191, 10, 48, .5);
-    border: 2px solid rgb(230, 230, 230);
+/**** Essentials ****/
 
-    display: flex;
-    justify-content: center;
-    align-content: center;
+#slides {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: .4em;
+    margin-top: .5em;
+    list-style-type: none;
+}
+
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 95%;
+    height: 10em;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.showing {
+    opacity: 1;
+    z-index: 2;
 }
 
 .slideshow-container {
-  width: 75%;
-  max-width: 1000px;
-  position: relative;
+  width: 95%;
+  height: 28em;
+  position: absolute;
   margin: 0 auto;
-  margin-bottom: 1.5em;
 }
 
-.mySlides img {
+/*
+non-essential styles
+*/
+
+.slide {
+    font-size: 40px;
+    padding: 1em;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+    max-height: 8em;
+}
+
+.slide-img {
     width: 100%;
-    height: 250px;
-    border: 4px solid rgba(191, 10, 48, .9);
+    height: 100%;
+    margin: 0 auto;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: .5em;
-  padding: 16px;
-  color: black;
-  font-weight: bold;
-  font-size: 30px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+.slide:nth-of-type(1) {
+    background: rgb(191, 10, 48);
+}
+.slide:nth-of-type(2) {
+    background: rgb(0, 40, 104);
+}
+.slide:nth-of-type(3) {
+    background: rgb(191, 10, 48);
 }
 
-.prev {
-    text-shadow: 1px 2px rgb(191, 10, 48);
+/**** CONTACT CARD ****/
+
+
+/**** FOOTER ****/
+
+footer {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 4em;
+    background-color: rgb(0, 40, 104);
+    color: white;
+    height: 80px;
+    padding-top: 2em;
+    font-family: 'Muli', sans-serif;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-  text-shadow: -1px 2px rgb(191, 10, 48);
+footer img {
+    width: 2em;
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  position: absolute;
+/**** ABOUT PAGE ****/
+
+/**** TITLE AREA ****/
+
+.about-page h2 {
+  text-align: center;
+  margin-top: 1em;
+}
+
+/**** CARDS ****/
+
+.about-card {
   width: 100%;
+}
+.hide {
+    display: none;
+}
+
+.name {
   text-align: center;
-  text-shadow: 2px 2px black;
-  bottom: .5em;
+  margin-top: .5em;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: black;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  text-align: center;
-  left: 45%;
+.headshot {
+  width: 60%;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+.btn {
+  padding: 1em;
+  margin: 0 auto;
+  margin-top: 1em;
+
 }
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-
-
-
 
 
 
@@ -411,8 +434,50 @@ nav {
    Modify as content requires.
    ========================================================================== */
 
-/**** TABLET STYLES ****/
-@media (min-width: 725px) {
+/**** DESKTOP STYLES ****/
+
+@media (min-width: 675px) {
+  /**** NAVIGATION ****/
+
+
+  /**** INTRO/TITLE ****/
+
+   /**** CARDS ****/
+
+  /**** SLIDESHOW ****/
+
+  .slideshow-container {
+    width: 90%;
+    margin: 0 auto;
+    max-heght: 1100px;
+  }
+
+  #slides {
+    width: 100%;
+    max-height: 900px;
+  }
+
+  .slide {
+    width: 90%;
+    margin-left: 1em;
+    max-height: 450px;
+    height: 20em;
+  }
+
+  .slide img {
+    height: 9em;
+  }
+
+  /**** CONTACT ****/
+
+  .contact-card {
+    margin-top: 7em;
+  }
+
+}
+
+/**** DESKTOP STYLES ****/
+@media (min-width: 875px) {
 
     /**** NAVIGATION ****/
 
@@ -431,7 +496,9 @@ nav {
     }
 
     .head-wrapper {
-        height: 9em;
+      height: 200pxs;
+      max-height: 15em;
+      overflow: hidden;
     }
 
     .navigation {
@@ -460,12 +527,78 @@ nav {
      /**** CARDS ****/
 
     /**** SLIDESHOW ****/
-
-    .mySlides img {
-    width: 100%;
-    height: 350px;
-    border: 4px solid rgba(191, 10, 48, .9);
+    .slideshow-container {
+      height: 50em;
+      float: left;
     }
+
+    #slides {
+      width: 90%;
+      height: 40em;
+      margin-top: 1em;
+    }
+
+    .slide {
+      width: 100%;
+      max-height: 450px;
+      height: 30em;
+    }
+
+    .slide img {
+      height: 9em;
+    }
+
+    /**** FOOTER ****/
+
+    footer {
+      clear: both;
+    }
+}
+
+/**** LARGE DESKTOP STYLES ****/
+
+@media (min-width: 993px) {
+  /**** NAVIGATION ****/
+
+  .logo img:hover {
+      width: 15%;
+  }
+  /**** SLIDESHOW ****/
+
+  .slideshow-container {
+    height: 28em;
+    max-width: 400px;
+    position: absolute;
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex: 0 0 50%;
+  }
+
+  #slides {
+    width: 90%;
+    height: 30em;
+    margin-top: 1em;
+    margin-right: 2em;
+    margin-left: 0;
+  }
+
+  .slide {
+    width: 100%;
+    max-height: 300px;
+    margin-right: 1em;
+    margin-left: 0;
+  }
+
+  .slide img {
+    height: 5.7em;
+  }
+
+  /**** FOOTER ****/
+
+  footer {
+    clear: both;
+  }
 }
 
     @media only screen and (min-width: 35em) {
