@@ -29,11 +29,13 @@ button.addEventListener("click", function () {
   divToToggle.classList.toggle("hide");
 });
 
-// Show More-Paco div when "More About Brian" button is clicked
+// Show More-Paco div when "More About Paco" button is clicked
+
 
 var buttonPaco = document.querySelector(".aboutBtnPaco");
 var divToTogglePaco = document.querySelector("#more-paco");
 
 buttonPaco.addEventListener("click", function () {
+
   divToTogglePaco.classList.toggle("hide");
 });
